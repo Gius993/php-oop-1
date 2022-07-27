@@ -10,7 +10,7 @@
 			$this->genre = $_genre;
 		}
 		public function relaseDate(){
-			if($this->title='Jerry Poker e i doni del dealer pt 1'){
+			if($this->title =='Jerry Poker e i doni del dealer pt 1'){
 				
 				echo 'Domani al cinema';
 			}else{
