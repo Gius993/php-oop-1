@@ -3,20 +3,24 @@
 		public $title;
 		public $genre;
 		public $duration = 0;
-		public $buget = 0;
-	}
-
-	$jerrypoker = new Movie();
-	$jerrypoker->title = 'Jerry Poker e i doni del dealer pt 1';
-	$jerrypoker->genre = 'Fantasy';
-	$jerrypoker->duration = 18;
-	$jerrypoker->buget = 111000000;
-
-	$scontrotitanic = new Movie();
-	$scontrotitanic->title = 'Scontro tra titanic';
-	$scontrotitanic->genre = 'Drammatico';
-	$scontrotitanic->duration = 89;
-	$scontrotitanic->buget = 400000000;
+		public $budget = 0;
+		
+		public function __construct($_title, $_genre){
+			$this->title = $_title;
+			$this->genre = $_genre;
+		}
+		public function relaseDate(){
+			return 'Domani al cinema';
+		}
+	}	
+		$jerrypoker = new Movie('Jerry Poker e i doni del dealer pt 1', 'Fantasy');
+		$jerrypoker->duration = 18;
+		$jerrypoker->budget = 111000000;
+		
+		$scontrotitanic = new Movie('Scontro tra titanic', 'Dramma');
+		$scontrotitanic->duration = 89;
+		$scontrotitanic->budget = 400000000;
+		
 ?>
 
 
@@ -33,10 +37,19 @@
 </head>
 <body>
 	<div>
-		<h1><?php echo $jerrypoker->title;   ?></h1>
-		<p></p>
-		<p></p>
-		<p></p>
+		<h1><?php echo $jerrypoker->title; ?></h1>
+		<p><?php echo $jerrypoker->genre; ?></p>
+		<p><?php echo $jerrypoker->duration; ?></p>
+		<p><?php echo $jerrypoker->budget; ?></p>
+		<h2><?php echo $jerrypoker->relaseDate()   ?></h2>
+	</div>
+
+	<div>
+		<h1><?php echo $scontrotitanic->title; ?></h1>
+		<p><?php echo $scontrotitanic->genre; ?></p>
+		<p><?php echo $scontrotitanic->duration; ?></p>
+		<p><?php echo $scontrotitanic->budget; ?></p>
+		<h2><?php echo $scontrotitanic->relaseDate()?></h2>
 	</div>
 </body>
 </html>
