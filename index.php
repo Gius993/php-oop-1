@@ -10,7 +10,12 @@
 			$this->genre = $_genre;
 		}
 		public function relaseDate(){
-			return 'Domani al cinema';
+			if($this->title='Jerry Poker e i doni del dealer pt 1'){
+				
+				echo 'Domani al cinema';
+			}else{
+				echo 'prossimamente';
+			}			
 		}
 	}	
 		$jerrypoker = new Movie('Jerry Poker e i doni del dealer pt 1', 'Fantasy');
@@ -49,7 +54,7 @@
 		<p><?php echo $scontrotitanic->genre; ?></p>
 		<p><?php echo $scontrotitanic->duration; ?></p>
 		<p><?php echo $scontrotitanic->budget; ?></p>
-		<h2><?php echo $scontrotitanic->relaseDate()?></h2>
+		<h2><?php echo $scontrotitanic->relaseDate()   ?></h2>
 	</div>
 </body>
 </html>
